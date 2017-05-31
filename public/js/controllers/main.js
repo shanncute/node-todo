@@ -14,6 +14,12 @@ angular.module('todoController', [])
 				$scope.loading = false;
 			});
 
+		Todos.get1()
+			.success(function(data) {
+				$scope.products = data;
+				$scope.loading = false;
+			});
+
 		// CREATE ==================================================================
 		// when submitting the add form, send the text to the node API
 		$scope.createTodo = function() {
@@ -31,6 +37,14 @@ angular.module('todoController', [])
 						$scope.loading = false;
 						$scope.formData = {}; // clear the form so our user is ready to enter another
 						$scope.todos = data; // assign our new list of todos
+					});
+				Todos.create1($scope.formData1)
+
+					// if successful creation, call our get function to get all the new todos
+					.success(function(data) {
+						$scope.loading = false;
+						$scope.formData = {}; // clear the form so our user is ready to enter another
+						$scope.products = data; // assign our new list of todos
 					});
 			}
 		};

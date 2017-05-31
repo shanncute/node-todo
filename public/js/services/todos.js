@@ -7,8 +7,14 @@ angular.module('todoService', [])
 			get : function() {
 				return $http.get('/api/todos');
 			},
+			get1 : function() {
+				return $http.get('/api/products');
+			},
 			create : function(todoData) {
 				return $http.post('/api/todos', todoData);
+			},
+			create1 : function(productData) {
+				return $http.post('/api/products', productData);
 			},
 			delete : function(id) {
 				return $http.delete('/api/todos/' + id);
