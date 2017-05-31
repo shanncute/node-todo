@@ -17,6 +17,7 @@ Node provides the RESTful API. Angular provides the frontend and accesses the AP
 3. Start the server: `node server.js`
 4. View in browser at `http://localhost:8080`
 
+
 ## Tutorial Series
 
 This repo corresponds to the Node Todo Tutorial Series on [scotch.io](http://scotch.io)
@@ -29,3 +30,16 @@ Each branch represents a certain tutorial.
 Happy Todo-ing!
 
 ![Todo-aholic](http://i.imgur.com/ikyqgrn.png)
+
+#===============================================#
+#===============================================#
+
+Run before starting server : >"C:\Program Files\MongoDB\Server\3.4\bin\mongod.exe"
+module.exports = {
+    remoteUrl : 'mongodb://sankar:sankar123@cluster0-shard-00-00-jn6u4.mongodb.net:27017,cluster0-shard-00-01-jn6u4.mongodb.net:27017,cluster0-shard-00-02-jn6u4.mongodb.net:27017/admin?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin',
+    localUrl: 'mongodb://localhost/admin'
+};
+
+
+#===============================================#
+#===============================================#
